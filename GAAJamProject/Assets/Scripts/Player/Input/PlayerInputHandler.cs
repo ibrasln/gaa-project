@@ -39,4 +39,6 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started) RangeAttackInput = true;
         if (context.canceled) RangeAttackInput = false;
     }
+
+    public void UseRollInput() => RollInput = false;
 }
