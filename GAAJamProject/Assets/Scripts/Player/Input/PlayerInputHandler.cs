@@ -10,7 +10,6 @@ public class PlayerInputHandler : MonoBehaviour
     #endregion
 
     #region Ability Inputs
-    public bool RollInput { get; private set; }
     public bool MeleeAttackInput { get; private set; }
     public bool RangeAttackInput { get; private set; }
     #endregion
@@ -20,12 +19,6 @@ public class PlayerInputHandler : MonoBehaviour
         MovementInput = context.ReadValue<Vector2>();
         InputX = MovementInput.x;
         InputY = MovementInput.y;
-    }
-
-    public void Roll(InputAction.CallbackContext context)
-    {
-        if (context.started) RollInput = true;
-        else if (context.canceled) RollInput = false;
     }
 
     public void MeleeAttack(InputAction.CallbackContext context)
@@ -39,6 +32,4 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started) RangeAttackInput = true;
         if (context.canceled) RangeAttackInput = false;
     }
-
-    public void UseRollInput() => RollInput = false;
 }

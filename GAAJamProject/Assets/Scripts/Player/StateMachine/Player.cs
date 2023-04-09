@@ -16,11 +16,6 @@ public class Player : MonoBehaviour
     public Vector2 CurrentVelocity { get; private set; }
     [SerializeField] private PlayerDataSO playerData;
     private Vector2 workspace;
-
-    [SerializeField] private Transform rollingBallsParent;
-    [SerializeField] private float rollingBallCooldown;
-    private float activateBallsTimer;
-    private float deactivateBallsTimer = 2f;
     #endregion
 
     #region STATES
@@ -35,8 +30,6 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         StateMachine = new();
-
-        activateBallsTimer = rollingBallCooldown;
     }
 
     private void Start()
@@ -52,15 +45,6 @@ public class Player : MonoBehaviour
         StateMachine.CurrentState.LogicUpdate();
         Debug.Log(StateMachine.CurrentState);
         CurrentVelocity = RB.velocity;
-
-        if (activateBallsTimer > 0)
-        {
-            activateBallsTimer -= Time.deltaTime;
-        }
-        else
-        {
-            RollBalls();
-        }
     }
     #endregion
 
@@ -79,22 +63,6 @@ public class Player : MonoBehaviour
     public void SetVelocityZero()
     {
         RB.velocity = Vector2.zero;
-    }
-    #endregion
-
-    #region ATTACKS
-    private void RollBalls()
-    {
-        if (deactivateBallsTimer > 0)
-        {
-            deactivateBallsTimer -= Time.deltaTime;
-            rollingBallsParent.Rotate(0, 0, .5f);
-        }
-        else
-        {
-            activateBallsTimer = rollingBallCooldown;
-            deactivateBallsTimer = 2f;
-        }
     }
     #endregion
 }

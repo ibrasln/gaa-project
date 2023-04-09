@@ -2,7 +2,6 @@ public class PlayerGroundedState : PlayerState
 {
     protected float xInput;
     protected float yInput;
-    protected bool rollInput;
     protected bool meleeAttackInput;
     protected bool rangeAttackInput;
 
@@ -27,7 +26,6 @@ public class PlayerGroundedState : PlayerState
         #region Inputs
         xInput = player.InputHandler.InputX;
         yInput = player.InputHandler.InputY;
-        rollInput = player.InputHandler.RollInput;
         meleeAttackInput = player.InputHandler.MeleeAttackInput;
         rangeAttackInput = player.InputHandler.RangeAttackInput;
         #endregion
