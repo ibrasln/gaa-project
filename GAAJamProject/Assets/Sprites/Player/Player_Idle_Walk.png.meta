@@ -1,24 +1,12 @@
 fileFormatVersion: 2
-guid: c5b15ca3a0987ac46b73e4a04e12eeb2
+guid: 88735c6ac446fc14ea0c51dcbd70256c
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 4035959289877228764
-    second: Walk_0
-  - first:
-      213: -982904232830982447
-    second: Walk_1
-  - first:
-      213: -350908408369970039
-    second: Walk_2
-  - first:
-      213: -5409570386352685021
-    second: Walk_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -74,7 +62,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -101,19 +89,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -137,7 +113,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: Player_Idle_Walk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 150
-        height: 150
+        x: 18
+        y: 14
+        width: 15
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f9a3876a99df914da548f46e60ad6a3
-      internalID: 4035959289877228764
+      spriteID: 8b87a9f044ce81b4cbb054159cadefc9
+      internalID: -133588135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_1
+      name: Player_Idle_Walk_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 150
-        height: 150
+        x: 41
+        y: 14
+        width: 15
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30bb9e9e4df42a74fb21bd99d94251b0
-      internalID: -982904232830982447
+      spriteID: 33e01276f18f2c84d90fe5bc26eafa3e
+      internalID: -468180333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
+      name: Player_Idle_Walk_2
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 150
-        height: 150
+        x: 62
+        y: 14
+        width: 15
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87869644d0d29074f9c24a61300d4dee
-      internalID: -350908408369970039
+      spriteID: 22a37a0f6a30afd4e89e59a3b130335e
+      internalID: 1956772961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_3
+      name: Player_Idle_Walk_3
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 150
-        height: 150
+        x: 83
+        y: 14
+        width: 15
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9b8e1e91c1e8bd488a7ee1cd7af5230
-      internalID: -5409570386352685021
+      spriteID: 4733950bf8973674caf21c7c90eb9c3e
+      internalID: -470523666
       vertices: []
       indices: 
       edges: []
@@ -246,10 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_0: 4035959289877228764
-      Walk_2: -350908408369970039
-      Walk_3: -5409570386352685021
-      Walk_1: -982904232830982447
+      Player_Idle_Walk_3: -470523666
+      Player_Idle_Walk_0: -133588135
+      Player_Idle_Walk_2: 1956772961
+      Player_Idle_Walk_1: -468180333
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
