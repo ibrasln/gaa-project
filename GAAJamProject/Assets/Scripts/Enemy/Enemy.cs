@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Animator anim;
 
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private EnemyState currentState;
+    [SerializeField] private float attackCooldown;
+    private float attackTimer;
 
     private Transform academy;
 
@@ -15,11 +17,12 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Start()
     {
+        attackTimer = attackCooldown;
         academy = GameObject.FindGameObjectWithTag("Academy").transform;
         currentState = EnemyState.MOVE;
     }
@@ -56,12 +59,29 @@ public class Enemy : MonoBehaviour
 
     private void AttackAcademy()
     {
-
+        if (attackTimer < 0)
+        {
+            anim.SetBool("idle", false);
+            anim.SetTrigger("attack");
+            SoundManager.Instance.PlaySound(SoundManager.SoundTypes.Damage);
+            academy.GetComponent<Health>().TakeDamage();
+            attackTimer = attackCooldown;
+        }
+        else
+        {
+            attackTimer -= Time.deltaTime;
+            anim.SetBool("idle", true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Academy"))
+        if (collision.CompareTag("Ammo"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        else if (collision.CompareTag("Academy"))
         {
             canAttack = true;
         }

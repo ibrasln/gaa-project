@@ -41,12 +41,15 @@ public class EnemySpawner : MonoBehaviour
         if (enemySpawnPositions[randIndex].GetComponent<EnemySpawnPosition>().CanSpawnEnemy) 
         {
             int randEnemyIndex = Random.Range(0, enemies.Count);
-            Instantiate(enemies[randEnemyIndex], enemySpawnPositions[randIndex].position, Quaternion.identity);
-            Debug.Log("Enemy has been created!");
-        }
-        else
-        {
-            Debug.Log("There is an enemy!");
+            GameObject enemy = Instantiate(enemies[randEnemyIndex], enemySpawnPositions[randIndex].position, Quaternion.identity);
+            if (academy.position.x > enemy.transform.position.x)
+            {
+                enemy.transform.localScale = Vector3.one;
+            }
+            else
+            {
+                enemy.transform.localScale = new(-1, 1, 1);
+            }
         }
     }
 }

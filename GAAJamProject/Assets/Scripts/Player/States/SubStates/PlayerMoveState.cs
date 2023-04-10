@@ -20,6 +20,8 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.LogicUpdate();
 
+        player.Flip(xInput);
+
         if (xInput == 0 && yInput == 0)
         {
             stateMachine.ChangeState(player.IdleState);

@@ -15,24 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Roll",
-                    "type": "Button",
-                    "id": "7c75e26e-126b-4675-b9c7-23ff22b18767",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Melee Attack",
-                    "type": "Button",
-                    "id": "666f6e46-23a4-4c52-b600-5109221e2a80",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Range Attack",
                     "type": "Button",
                     "id": "d0a87ef6-986f-4cc4-9f15-0114406b426a",
@@ -100,30 +82,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b72f523b-15bc-4b3b-960b-d8ffdc791671",
-                    "path": "<Keyboard>/leftCtrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Roll",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0d3a64f4-2474-4be9-9506-f96c364bb1a4",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Melee Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "120eca02-6c97-4acc-85da-f160ef299155",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

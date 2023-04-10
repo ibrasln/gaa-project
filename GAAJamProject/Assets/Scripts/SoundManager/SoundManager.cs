@@ -30,8 +30,12 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void PlayBgMusic(BgMusicTypes currentMusic)
     {
         switch (currentMusic)

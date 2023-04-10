@@ -7,7 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public void OnPlayButtonClick()
     {
-        SceneManager.LoadScene("ZeynepTest");
+        SoundManager.Instance.PlaySound(SoundManager.SoundTypes.ButtonClick);
+        SceneManager.LoadScene("MainGameScene");
     }
     
     public void OnQuitButtonClick()
